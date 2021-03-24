@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import ReactStars from "react-rating-stars-component";
 import { GlobalContext } from "../context/GlobalState";
 
 export const ResultCard = ({ movie }) => {

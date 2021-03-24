@@ -13,7 +13,7 @@ const Add = () => {
       `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1&include_adult=false&query=${query}`
     )
       .then((response) => response.json())
-      .then((data) => (setMovies(data.results), console.log(data.results)))
+      .then((data) => setMovies(data.results))
       .catch((err) => console.log(err));
   };
   return (
