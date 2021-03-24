@@ -1,38 +1,176 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app-container {
+  background-color: white;
+  position: relative;
+  max-width: 480px;
+  padding: 0;
+  margin: 20px auto;
+  box-sizing: border-box;
   min-height: 100vh;
+}
+
+.navigation-bar {
+  width: 480px;
+  background-color: black;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  bottom: 0;
+  padding: 10px 30px;
+  justify-content: space-between;
+}
+
+.navbar-side {
+  display: flex;
+}
+
+.navbar-side div {
+  margin-left: 20px;
+}
+
+.movie-container {
+  padding: 5px;
+}
+
+.add-page {
+  padding: 0px;
+}
+.result-controls button {
+  font-size: 10px;
+  margin: 0 5px;
+}
+
+.result-controls {
+  padding: 10px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.input-wrapper {
+  position: sticky;
+  text-align: center;
+  background: linear-gradient(
+    90deg,
+    rgba(7, 75, 121, 1) 0%,
+    rgba(122, 9, 152, 1) 100%
+  );
+  height: 100px;
+  padding: 30px;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.search-container {
+  padding: 6px;
+}
+
+.movie-card .inner-card-controls {
+  display: inline;
+  background-color: red;
+  bottom: 20px;
+  left: 40%;
+  background: black;
+  border-radius: 5px;
+  padding: 3px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.movie-card:hover .inner-card-controls {
+  opacity: 1;
+}
+
+.inner-card-controls button {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.trending-container {
+  padding: 0px 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.trending-card {
+  display: flex;
+  margin-top: 10px;
+  padding: 0px 5px;
+  align-items: center;
+  box-shadow: 1px 0px 6px 1px rgba(0, 0, 0, 0.17);
+}
+
+.position {
+  color: aliceblue;
+  font-weight: bold;
+  margin: 5px;
+  background-color: hotpink;
+  padding: 1px 8px;
+  border-radius: 50px;
+}
+
+.weekly-container {
+  margin: 0px 0px;
+  display: flex;
+  overflow-y: auto;
+}
+
+.weekly-header {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.weekly-header h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.weekly-header h2 {
+  font-size: 15px;
+}
+
+.weekly-container::-webkit-scrollbar {
+  width: 0;
+}
+
+.weekly-container > div {
+  margin: 0px 10px;
+}
+
+.weekly-info h1 {
+  font-weight: bold;
+  font-size: 12px;
+}
+.weekly-info h2 {
+  font-size: 10px;
+  color: grey;
+}
+
+.weekly-info h3 {
+  font-size: 8px;
+}
+
+.trending-info {
+  margin: 20px;
+}
+.trending-card h1 {
+  font-size: 18px;
+}
+
+.trending-card h2 {
+  font-size: 12px;
+}
+
+.trending-card h3 {
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 600px) {
+  .app-container {
+    margin: 0;
   }
-  to {
-    transform: rotate(360deg);
+  .navigation-bar {
+    width: 100%;
   }
 }
