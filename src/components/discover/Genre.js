@@ -7,7 +7,7 @@ const Genre = () => {
     fetch(`
     https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US`)
       .then((response) => response.json())
-      .then((data) => (setGenre(data.genres), console.log("genre", data)))
+      .then((data) => setGenre(data.genres))
       .catch((error) => console.log(error));
   }, []);
   return (
