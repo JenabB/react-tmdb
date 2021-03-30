@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const ResultMovie = (movie) => {
+const ResultMovie = () => {
   const [genre] = useState("28");
   const [movies, setMovies] = useState([]);
-
+  console.log(movies);
   useEffect(() => {
     fetch(
       `https://api.themoviedb.org/3/discover/movie?api_key=bb3adbee117f90173796752289a7ae37&with_genres=${genre}`
@@ -12,7 +12,7 @@ const ResultMovie = (movie) => {
       .then((response) => response.json())
       .then((data) => setMovies(data.results))
       .catch((error) => console.log(error));
-  }, [genre, movies]);
+  }, [genre]);
 
   return (
     <div className="discovery-result">

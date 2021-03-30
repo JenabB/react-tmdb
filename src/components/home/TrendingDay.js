@@ -17,10 +17,12 @@ const TrendingDay = () => {
     <div>
       <div className="trending-container" style={{ marginBottom: "70px" }}>
         <h1>Trending</h1>
-        <h1>1-10</h1>
+
         {trending &&
           trending?.map((movie) => (
-            <TrendingDayCard movie={movie} trending={trending} />
+            <div key={movie.id}>
+              <TrendingDayCard movie={movie} trending={trending} />
+            </div>
           ))}
       </div>
     </div>

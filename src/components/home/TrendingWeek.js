@@ -35,7 +35,9 @@ const TrendingWeek = () => {
         <div className="weekly-container">
           {trending &&
             trending?.map((movie) => (
-              <TrendingWeekCard movie={movie} trending={trending} />
+              <div key={movie.id}>
+                <TrendingWeekCard movie={movie} trending={trending} />
+              </div>
             ))}
         </div>
       </div>

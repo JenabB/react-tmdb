@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-
+import "./Detail.css";
 const MovieDetail = ({ match }) => {
   const [detail, setDetail] = useState([]);
   const [credit, setCredit] = useState([]);
@@ -53,17 +53,20 @@ const MovieDetail = ({ match }) => {
         <h2>{detail.overview}</h2>
       </div>
 
-      <div className="movie-cast">
-        {credit.cast?.map((cast) => (
-          <div>
-            <img
-              src={`https://image.tmdb.org/t/p/w185${cast.profile_path}`}
-              alt={`${cast.name} Poster`}
-            />
-            <h1>{cast.name}</h1>
-            <h2>{cast.character}</h2>
-          </div>
-        ))}
+      <div className="cast">
+        <h1 style={{ margin: "10px " }}>Cast</h1>
+        <div className="cast-container">
+          {credit.cast?.map((cast) => (
+            <div key={cast.id} className="cast-card">
+              <img
+                src={`https://image.tmdb.org/t/p/w185${cast.profile_path}`}
+                alt={`${cast.name} Poster`}
+              />
+              <h1>{cast.name}</h1>
+              <h2>{cast.character}</h2>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
