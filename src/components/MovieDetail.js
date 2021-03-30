@@ -9,9 +9,9 @@ const MovieDetail = ({ match }) => {
       `https://api.themoviedb.org/3/movie/${params}?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US`
     )
       .then((response) => response.json())
-      .then((data) => (setDetail(data), console.log(data)))
+      .then((data) => setDetail(data))
       .catch((error) => console.log(error));
-  }, []);
+  }, [params]);
 
   return (
     <div>

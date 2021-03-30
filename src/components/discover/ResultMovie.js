@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const ResultMovie = (movie) => {
-  const [genre, setGenre] = useState("28");
+  const [genre] = useState("28");
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -10,9 +10,9 @@ const ResultMovie = (movie) => {
       `https://api.themoviedb.org/3/discover/movie?api_key=bb3adbee117f90173796752289a7ae37&with_genres=${genre}`
     )
       .then((response) => response.json())
-      .then((data) => (setMovies(data.results), console.log(data.results)))
+      .then((data) => setMovies(data.results))
       .catch((error) => console.log(error));
-  }, []);
+  }, [genre, movies]);
 
   return (
     <div className="discovery-result">
