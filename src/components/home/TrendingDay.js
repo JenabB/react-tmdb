@@ -13,18 +13,11 @@ const TrendingDay = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  const top10 = [];
-
-  for (var i = 0; i < 10; i++) {
-    top10.push(trending[i]);
-  }
-
-  console.log(top10);
-
   return (
     <div>
-      <div className="trending-container">
+      <div className="trending-container" style={{ marginBottom: "70px" }}>
         <h1>Trending</h1>
+        <h1>1-10</h1>
         {trending &&
           trending?.map((movie) => (
             <TrendingDayCard movie={movie} trending={trending} />

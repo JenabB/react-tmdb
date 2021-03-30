@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 import { Link } from "react-router-dom";
-import MovieCard from "./MovieCard";
+import MovieCard from "../components/MovieCard";
 
 const Watchlist = () => {
   const { watchlist } = useContext(GlobalContext);

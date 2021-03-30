@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ResultCard } from "./ResultCard";
+import { ResultCard } from "../ResultCard";
 import Trending from "./Trending";
 
 const Add = () => {
@@ -16,6 +16,7 @@ const Add = () => {
       .then((data) => setMovies(data.results))
       .catch((err) => console.log(err));
   };
+
   return (
     <div className="add-page">
       <div className="add-content">

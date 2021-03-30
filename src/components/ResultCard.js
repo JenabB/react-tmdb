@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
+import { Link } from "react-router-dom";
 
 export const ResultCard = ({ movie }) => {
   const {
@@ -21,7 +22,7 @@ export const ResultCard = ({ movie }) => {
   const watchedDisabled = storedMovieWatched ? true : false;
 
   return (
-    <div className="movie-card">
+    <Link to={`movie/${movie.id}`}>
       <div className="poster-wrapper">
         {movie.poster_path ? (
           <img
@@ -62,6 +63,6 @@ export const ResultCard = ({ movie }) => {
           </button>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };

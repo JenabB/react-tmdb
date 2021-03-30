@@ -1,0 +1,15 @@
+.by-genre-result {
+  display: flex;
+}
+
+.discovery-result {
+  padding: 0px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+
+.discovery-result div {
+  margin: 5px 0px;
+}
