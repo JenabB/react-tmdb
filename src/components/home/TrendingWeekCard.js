@@ -11,8 +11,6 @@ const TrendingWeekCard = ({ movie }) => {
         />
         <div className="weekly-info">
           <h1>{movie.title}</h1>
-          <h2>{movie.release_date}</h2>
-          <h3>popularity: {movie.popularity}</h3>
         </div>
       </Link>
     </div>

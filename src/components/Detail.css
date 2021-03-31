@@ -1,3 +1,25 @@
+.genre-container {
+  display: flex;
+  overflow: auto;
+}
+
+.genre-container h1 {
+  font-size: 10px;
+  margin: 0 10px;
+}
+
+.movie-meta h1 {
+  font-size: 30px;
+}
+
+.movie-meta h2 {
+  font-size: 20px;
+}
+
+.movie-meta h3 {
+  font-size: 18px;
+}
+
 .cast-container {
   margin: 20px 0px;
   display: flex;

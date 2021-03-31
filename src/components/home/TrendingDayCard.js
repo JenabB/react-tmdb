@@ -5,10 +5,6 @@ const TrendingDayCard = ({ trending, movie }) => {
   return (
     <Link to={`movie/${movie.id}`}>
       <div className="trending-card">
-        <div className="position">
-          <p>{trending.indexOf(movie) + 1}</p>
-        </div>
-
         <div className="movie-poster">
           <img
             src={`https://image.tmdb.org/t/p/w185${movie.poster_path}`}

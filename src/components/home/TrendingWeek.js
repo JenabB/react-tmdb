@@ -23,10 +23,10 @@ const TrendingWeek = () => {
 
   return (
     <div>
-      <div className="trending-container">
+      <div className="popular-container">
         <div className="weekly-header">
           <div>
-            <h1>Weekly</h1>
+            <h1 style={{ fontSize: "20px" }}>Popular</h1>
           </div>
           <div>
             <h2>See All</h2>

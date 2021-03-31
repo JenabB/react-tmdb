@@ -47,10 +47,15 @@ const MovieDetail = ({ match }) => {
           <div className="filler-poster" />
         )}
       </div>
-      <div className="movie-meta">
+      <div className="movie-meta" style={{ padding: "20px" }}>
         <h1>{detail.title}</h1>
         <h2>{detail.release_date}</h2>
-        <h2>{detail.overview}</h2>
+
+        <div>{detail.runtime}</div>
+        <div>
+          {detail.vote_average} ({detail.vote_count})
+        </div>
+        <h3 style={{ textAlign: "justify" }}>{detail.overview}</h3>
       </div>
 
       <div className="cast">

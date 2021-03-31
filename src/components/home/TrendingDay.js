@@ -16,7 +16,7 @@ const TrendingDay = () => {
   return (
     <div>
       <div className="trending-container" style={{ marginBottom: "70px" }}>
-        <h1>Trending</h1>
+        <h1 style={{ fontSize: "20px" }}>Trending</h1>
 
         {trending &&
           trending?.map((movie) => (
