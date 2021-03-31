@@ -21,6 +21,12 @@
 
 .navbar-side {
   display: flex;
+  text-align: center;
+}
+
+.navbar-side h1 {
+  font-size: 15px;
+  color: aliceblue;
 }
 
 .navbar-side div {
@@ -63,18 +69,6 @@
 
 .inner-card-controls button {
   color: white;
-}
-
-.trending-container {
-  padding: 0px 20px;
-}
-
-.trending-card {
-  display: flex;
-  margin-top: 10px;
-  padding: 0px 5px;
-  align-items: center;
-  box-shadow: 1px 0px 6px 1px rgba(0, 0, 0, 0.17);
 }
 
 .genre-list {

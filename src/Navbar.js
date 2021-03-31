@@ -8,25 +8,46 @@ import Watched from "./pages/Watched";
 import Account from "./pages/Account";
 import MovieDetail from "./components/MovieDetail";
 
+import home from "./assets/images/icon-tmdb-home.png";
+import discover from "./assets/images/icon-tmdb-category.png";
+import watchlist from "./assets/images/icon-tmdb-watchlist.png";
+import watched from "./assets/images/icon-tmdb-watched.png";
+import account from "./assets/images/icon-tmdb-account.png";
+
 const Navbar = () => {
   return (
     <Router>
       <nav className="navigation-bar">
         <div className="navbar-side">
           <div style={{ marginLeft: 0 }}>
-            <Link to="/">Home</Link>
+            <Link to="/">
+              <img src={home} alt="icon" width="20px" />
+              <h1>Home</h1>
+            </Link>
           </div>
           <div>
-            <Link to="/discover">Discover</Link>
+            <Link to="/discover">
+              <img src={discover} alt="icon" width="20px" />
+              <h1>Discover</h1>
+            </Link>
           </div>
           <div>
-            <Link to="/watchlist">Watchlist</Link>
+            <Link to="/watchlist">
+              <img src={watchlist} alt="icon" width="20px" />
+              <h1>Watchlist</h1>
+            </Link>
           </div>
           <div>
-            <Link to="/watched">Watched</Link>
+            <Link to="/watched">
+              <img src={watched} alt="icon" width="20px" />
+              <h1>Watched</h1>
+            </Link>
           </div>
           <div>
-            <Link to="/account">Account</Link>
+            <Link to="/account">
+              <img src={account} alt="icon" width="20px" />
+              <h1>Account</h1>
+            </Link>
           </div>
         </div>
       </nav>
