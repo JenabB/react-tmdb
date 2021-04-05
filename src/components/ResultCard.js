@@ -45,7 +45,7 @@ export const ResultCard = ({ movie }) => {
           </div>
         </div>
 
-        <div className="result-controls">
+        <div>
           <button
             className="btn btn-secondary"
             disabled={watchlistDisabled}
@@ -53,7 +53,6 @@ export const ResultCard = ({ movie }) => {
           >
             Watchlist
           </button>
-
           <button
             className="btn btn-primary"
             disabled={watchedDisabled}
