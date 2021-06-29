@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ResultMovie = () => {
-  const [genre] = useState("28");
+  const [genre] = useState('28');
   const [movies, setMovies] = useState([]);
   console.log(movies);
   useEffect(() => {

@@ -1,16 +1,16 @@
-import React, { useState } from "react";
-import { ResultCard } from "../ResultCard";
-import Trending from "./Trending";
+import React, { useState } from 'react';
+import { ResultCard } from '../ResultCard';
+import Trending from './Trending';
 
 const Add = () => {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState('');
   const [movies, setMovies] = useState([]);
 
   const handleChange = (e) => {
     e.preventDefault();
     setQuery(e.target.value);
     fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1&include_adult=false&query=${query}`
+      `https://api.themoviedb.org/3/search/movie?api_key=bb3adbee117f90173796752289a7ae37&language=en-US&page=1&include_adult=false&query=${query}`
     )
       .then((response) => response.json())
       .then((data) => setMovies(data.results))

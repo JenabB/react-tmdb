@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
-import "./Detail.css";
+import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import './Detail.css';
 const MovieDetail = ({ match }) => {
   const [detail, setDetail] = useState([]);
   const [credit, setCredit] = useState([]);
@@ -11,9 +11,6 @@ const MovieDetail = ({ match }) => {
   function goBack() {
     history.goBack();
   }
-
-  console.log("detail", detail);
-  console.log("credit", credit);
 
   useEffect(() => {
     fetch(
@@ -41,13 +38,13 @@ const MovieDetail = ({ match }) => {
           <img
             src={`https://image.tmdb.org/t/p/w500${detail.poster_path}`}
             alt={`${detail.title} Poster`}
-            style={{ width: "100%" }}
+            style={{ width: '100%' }}
           />
         ) : (
           <div className="filler-poster" />
         )}
       </div>
-      <div className="movie-meta" style={{ padding: "20px" }}>
+      <div className="movie-meta" style={{ padding: '20px' }}>
         <h1>{detail.title}</h1>
         <h2>{detail.release_date}</h2>
 
@@ -55,11 +52,11 @@ const MovieDetail = ({ match }) => {
         <div>
           {detail.vote_average} ({detail.vote_count})
         </div>
-        <h3 style={{ textAlign: "justify" }}>{detail.overview}</h3>
+        <h3 style={{ textAlign: 'justify' }}>{detail.overview}</h3>
       </div>
 
       <div className="cast">
-        <h1 style={{ margin: "10px " }}>Cast</h1>
+        <h1 style={{ margin: '10px ' }}>Cast</h1>
         <div className="cast-container">
           {credit.cast?.map((cast) => (
             <div key={cast.id} className="cast-card">
